@@ -7,9 +7,11 @@ import matplotlib.pyplot as plt
 from torch import nn
 import yolo
 
+
 class YOLOloss(nn.Module):
-    def __init__(self,anchors, num_classes, input_shape, cuda, anchors_mask = [[6,7,8], [3,4,5], [0,1,2]], label_smoothing = 0):
-        super(YOLOloss,self).__init__()
+    def __init__(self, anchors, num_classes, input_shape, cuda, anchors_mask=[[6, 7, 8], [3, 4, 5], [0, 1, 2]],
+                 label_smoothing=0):
+        super(YOLOloss, self).__init__()
         self.anchors = anchors
         self.num_classes = num_classes
         self.bbox_attrs = 5 + num_classes
@@ -25,6 +27,10 @@ class YOLOloss(nn.Module):
         self.cuda = cuda
 
 
+def test():
+    pass
+
+
 # 按间距中的绿色按钮以运行脚本。
 if __name__ == '__main__':
-    pass
+    test()
